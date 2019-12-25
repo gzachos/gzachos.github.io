@@ -1469,6 +1469,17 @@ input, select, textarea {
 			width: 100%;
 		}
 
+	.feature-image-gzachos {
+		display: block;
+		padding: 10px;
+		margin: 0 0 1.5em 0;
+		outline: 0;
+	}
+		.feature-image-gzachos img {
+			display: block;
+			width: 200px;
+		}
+
 	.button-large {
 		background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
 		background-image: -webkit-linear-gradient(top, #ed391b, #ce1a00);
