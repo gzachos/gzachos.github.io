@@ -20,5 +20,3 @@ jobs:
       run: ./update-website.sh
     - name: Check git status
       run: git status
-    - name: Push changes
-      run: git push
