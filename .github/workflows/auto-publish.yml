@@ -10,10 +10,8 @@ jobs:
   update_dev_site:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
       with:
-        name: gzachos/gzachos.dev
-        ref: ref/heads/main
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repository: gzachos/gzachos.dev
     - name: Enter repo
       run: cd gzachos.dev
