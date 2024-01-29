@@ -1,0 +1,18 @@
+name: Automatic workflow
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  update_dev_site:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        name: gzachos/gzachos.dev
+        ref: ref/heads/main
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Enter repo
+      run: cd gzachos.dev
