@@ -13,5 +13,12 @@ jobs:
     - uses: actions/checkout@main
       with:
         repository: gzachos/gzachos.dev
+        path: .
+    - name: Show files
+      run: ls -l
+    - name: Show path
+      run: pwd
     - name: Enter repo
       run: cd gzachos.dev
+    - name: Sync repos
+      run: ./update-website.sh
