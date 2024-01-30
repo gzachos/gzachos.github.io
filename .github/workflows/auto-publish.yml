@@ -9,6 +9,7 @@ on:
 jobs:
   update_dev_site:
     runs-on: ubuntu-latest
+    permissions: write
     steps:
     - uses: actions/checkout@main
       with:
