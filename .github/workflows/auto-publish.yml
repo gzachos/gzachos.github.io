@@ -14,6 +14,7 @@ jobs:
     - uses: actions/checkout@main
       with:
         repository: gzachos/gzachos.dev
+        token: ${{ secrets.DEV_REPO_PAT }}
         path: .
     - name: Show files
       run: ls -l
