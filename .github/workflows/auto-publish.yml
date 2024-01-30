@@ -9,8 +9,7 @@ on:
 jobs:
   update_dev_site:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    permissions: write-all
     steps:
     - uses: actions/checkout@main
       with:
@@ -24,9 +23,8 @@ jobs:
       run: git status
     - name: Push changes
       run: |
-        date > last-update.txt
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add .
-        git commit -m "generated"
+        git commit -m "generated $(date +%Y%m%d_%H%M)"
         git push
