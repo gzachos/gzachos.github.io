@@ -1,17 +1,17 @@
-name: Automatic workflow
+name: Update gzachos.dev website
 
 on:
   push:
     branches:
-    - main
+    - master
   workflow_dispatch:
 
 jobs:
   update_dev_site:
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
-    - uses: actions/checkout@main
+    - name: Checkout to gzachos.dev
+      uses: actions/checkout@main
       with:
         repository: gzachos/gzachos.dev
         token: ${{ secrets.DEV_REPO_PAT }}
@@ -28,5 +28,4 @@ jobs:
         git config user.email github-actions@github.com
         git add .
         git commit -m "generated $(date +%Y%m%d_%H%M)"
-        git remote -v
-        git push -v
+        git push
