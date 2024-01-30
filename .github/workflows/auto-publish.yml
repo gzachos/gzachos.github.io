@@ -27,4 +27,5 @@ jobs:
         git config user.email github-actions@github.com
         git add .
         git commit -m "generated $(date +%Y%m%d_%H%M)"
-        git push
+        git remote -v
+        git push -v
