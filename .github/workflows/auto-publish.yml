@@ -20,3 +20,11 @@ jobs:
       run: ./update-website.sh
     - name: Check git status
       run: git status
+    - name: Push changes
+      run: |
+        date > last-update.txt
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "generated"
+        git push
